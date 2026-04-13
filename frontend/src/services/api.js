@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-// Using Vite proxy — requests go to /api/* and Vite forwards to http://localhost/school-backend/api/*
-// This eliminates all CORS issues entirely
-const BASE_URL = '/api';
+// In production: set VITE_API_URL to your hosted PHP backend URL
+// e.g. https://yourname.infinityfreeapp.com/api
+// In development: Vite proxy handles /api → localhost/school-backend/api
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 const api = axios.create({
   baseURL: BASE_URL,
