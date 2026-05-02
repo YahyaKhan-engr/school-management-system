@@ -1,0 +1,7 @@
+{
+  "name": "school/backend",
+  "description": "International School Management System API",
+  "require": {
+    "php": ">=8.0"
+  }
+}
